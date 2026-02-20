@@ -1,0 +1,4 @@
+interface:
+  display_name: "One-Click Repo Packager"
+  short_description: "Add run scripts + WebUI launcher to repos"
+  default_prompt: "Given a GitHub repo, add one-click Windows/macOS run scripts and a WebUI launcher."

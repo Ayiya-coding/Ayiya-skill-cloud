@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>One-Click Launcher</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>One-Click Launcher</h1>
+      <p id="status">Status: checking...</p>
+      <div class="actions">
+        <button id="installBtn">Install</button>
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        {% if app_url %}
+        <a id="appLink" class="link" href="{{ app_url }}" target="_blank" rel="noreferrer">Open App</a>
+        {% endif %}
+      </div>
+      <div class="logwrap">
+        <pre id="logs"></pre>
+      </div>
+    </div>
+    <script>
+      const HAS_INSTALL = {{ 'true' if has_install else 'false' }};
+      const HAS_RUN = {{ 'true' if has_run else 'false' }};
+    </script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
