@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Doc Integration Builder"
+  short_description: "Crawl API doc sites and build integration guidance"
+  default_prompt: "Given an API doc URL and project context, crawl docs/subpages, answer questions from source text, and generate integration guidance or an API skill."
