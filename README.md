@@ -1,6 +1,6 @@
-# Ayiya Skill Cloud
+# Ayiya Codex Cloud
 
-这个仓库用于同步 Codex 本地技能和插件。
+这个仓库用于同步 Codex 本地技能和插件，因此名称使用 Codex Cloud 更准确。
 
 ## 目录结构
 
