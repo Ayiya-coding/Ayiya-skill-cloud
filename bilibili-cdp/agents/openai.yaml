@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bilibili CDP"
+  short_description: "Capture B站 daily popular, ranking, trends, and comments"
+  default_prompt: "Use $bilibili-cdp to refresh B站 daily hotspot data into the media-coding database and legacy UI."

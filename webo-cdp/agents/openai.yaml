@@ -1,0 +1,4 @@
+interface:
+  display_name: "webo+CDP"
+  short_description: "Weibo hot-search detail-card crawler"
+  default_prompt: "Use $webo-cdp to refresh Weibo hot searches from logged-in detail-page first cards, including post stats and 50 hot comments per topic."

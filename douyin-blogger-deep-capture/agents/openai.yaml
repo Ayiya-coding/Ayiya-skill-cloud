@@ -1,0 +1,4 @@
+interface:
+  display_name: "Douyin Blogger Deep Capture"
+  short_description: "Rolling micro-batch Douyin blogger capture workflow"
+  default_prompt: "Use $douyin-blogger-deep-capture to run rolling 2-3 post Douyin blogger metadata, immediate video cache, comment, and content-analysis workflow."

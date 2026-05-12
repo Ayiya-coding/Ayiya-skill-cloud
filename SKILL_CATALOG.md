@@ -1,6 +1,6 @@
 ﻿# Skill Catalog
 
-> 统计口径：基于 `C:\Users\85337\.codex\skills` 目录递归检索到的 `SKILL.md` 汇总，并按 `name` 去重。当前共 57 个唯一 skill。
+> 统计口径：基于 `C:\Users\Administrator\.codex\skills` 目录递归检索到的 `SKILL.md` 汇总，并按 `name` 去重。当前共 69 个唯一 skill。
 > 说明：`调用示例` 列给的是推荐触发话术，不是唯一格式；一般既可以直接点名 skill，也可以通过自然语言描述场景让 Codex 自动匹配。
 > 编码说明：本文件已重建为 UTF-8 中文内容，避免旧版错误转码导致的乱码。
 
@@ -17,17 +17,39 @@
 | `skill-creator` | 设计或更新 skill 的触发条件、结构和工作流说明。 | 需要创建新 skill，或改造现有 skill 时。 | `请用 skill-creator 帮我设计一个处理日志排查的 skill` |
 | `skill-installer` | 从 curated 列表或 GitHub 仓库安装 skill 到本地。 | 需要安装现成 skill，或先查看有哪些可安装 skill 时。 | `请用 skill-installer 安装一个适合调试前端的 skill` |
 | `web-access` | 进行联网搜索、网页抓取、登录态站点操作与动态页面读取。 | 需要联网核验网页信息、抓数据、操作动态页面时。 | `请用 web-access 登录这个站点并抓取订单列表` |
+| `xcrawl` | 通过 XCrawl API 做单页抓取、格式选择、同步/异步执行和 JSON 抽取。 | 明确要用 XCrawl 抓取 URL、抽取结构化 JSON，且本地已有 `~/.xcrawl/config.json` API key 时。 | `请用 xcrawl 抓取这个页面并按 JSON schema 提取字段：<url>` |
+
+## Khazix Skills
+
+| 名称 | 主要用途 | 适合什么时候用 | 调用示例 |
+| --- | --- | --- | --- |
+| `neat-freak` | 会话收尾知识库清理，同步项目文档、根目录 AI 指南和 agent 记忆，避免知识过期。 | 一个开发阶段结束、准备交接、文档或记忆可能和代码不一致时。 | `请用 neat-freak 收尾整理一下这个项目` |
+| `hv-analysis` | 横纵分析法深度研究：纵向追历史，横向比同类，最终产出排版后的 PDF 研究报告。 | 需要系统研究一个产品、公司、概念、技术或人物，而不是只查一句定义时。 | `请用 hv-analysis 深度研究一下 Cursor` |
+| `khazix-writer` | 按「数字生命卡兹克」的口吻写中文公众号长文，内置风格规则、禁用词和自检体系。 | 需要把素材、链接、PDF、转写稿或散乱想法写成中文公众号长文时。 | `请用 khazix-writer 把这些素材写成一篇公众号文章` |
 
 ## 浏览器、自动化与远程协作
 
 | 名称 | 主要用途 | 适合什么时候用 | 调用示例 |
 | --- | --- | --- | --- |
+| `ayiya-web-control` | 使用持久 Chrome 配置和 Playwright CDP 自动化网页流程，支持登录态、表单、点击、下载和断点续跑。 | 需要稳定操作网站、复用登录态、下载文件或长时间执行网页任务时。 | `请用 ayiya-web-control 登录这个后台并导出订单数据` |
 | `browse` | 用快速无头浏览器做 QA、dogfooding、截图、状态断言和页面 diff。 | 需要测试站点、验证表单、抓取证据、检查响应式布局时。 | `请用 browse 打开这个页面并验证注册流程` |
 | `gstack` | 通用 GStack 浏览器入口，用于打开站点、交互验证和页面检查。 | 需要直接用 GStack 浏览器看页面、做交互或排查问题时。 | `请用 gstack 打开这个站点并检查首页状态` |
 | `open-gstack-browser` | 启动可见的 GStack Browser，让你实时观察 AI 浏览器操作。 | 需要打开带侧边栏的可视 Chromium 窗口时。 | `请用 open-gstack-browser 打开浏览器` |
 | `pair-agent` | 把你的浏览器访问权共享给另一个远程 agent。 | 需要让另一个 agent 协助操作当前浏览器时。 | `请用 pair-agent 把这个浏览器共享给远程 agent` |
 | `playwright` | 通过终端驱动真实浏览器，执行导航、表单、截图、抓取等流程。 | 需要脚本化浏览器自动化、复现 UI 流程或抓取页面内容时。 | `请用 playwright 跑一遍注册流程并截图` |
 | `setup-browser-cookies` | 把真实 Chromium 的 cookies 导入无头浏览器会话。 | 需要在 QA 前复用登录态、测试受保护页面时。 | `请用 setup-browser-cookies 导入这个站点的登录态` |
+
+## 社媒热榜与数据采集
+
+| 名称 | 主要用途 | 适合什么时候用 | 调用示例 |
+| --- | --- | --- | --- |
+| `baidu-cdp` | 通过影刀浏览器 CDP 抓取百度热搜榜、词条搜索页、主要文章、评论和 800 字内 AI 摘要，并写入 `media-coding` 数据库。 | 需要采集百度热搜榜，或实现/排查百度热搜爬虫和落库流程时。 | `请用 baidu-cdp 抓取百度热搜榜并存入数据库` |
+| `bilibili-blogger-deep-capture` | 分批抓取 B 站 UP 主主页的全部视频，补齐视频元数据、互动指标、前 50 条评论、本地媒体缓存和视频内容分析。 | 需要做 B 站博主主页全量采集、断点续跑，或补齐 `blogger_posts` 的评论和视频证据时。 | `请用 bilibili-blogger-deep-capture 抓取这个 B 站 UP 主主页的全部视频和评论` |
+| `bilibili-cdp` | 抓取、实现或排查 B 站综合热门、排行榜、热搜、视频详情、指标和评论采集流程。 | 需要刷新 B 站热榜数据，或维护 `media-coding` 里的 B 站热点抓取脚本时。 | `请用 bilibili-cdp 刷新 B 站热榜和排行数据` |
+| `douyin-cdp` | 通过影刀浏览器 CDP 抓取抖音创作者中心热点榜、热门内容、视频证据、评论和数据库字段。 | 需要采集抖音热点/创作者指数，或维护相关 CDP 抓取脚本时。 | `请用 douyin-cdp 刷新抖音热点数据` |
+| `douyin-blogger-deep-capture` | 用低风险 CDP 元数据采集、滚动小批次抓取、即时本地视频缓存、安全评论读取和本地视频理解，完成抖音博主主页深度采集。 | 需要分批抓取抖音博主主页、断点续跑评论和视频缓存，或继续补齐 `blogger_posts` 的内容证据时。 | `请用 douyin-blogger-deep-capture 抓取这个抖音博主主页并分批补齐评论和视频缓存` |
+| `webo-cdp` | 通过影刀浏览器 CDP 抓取微博热搜、详情页首条微博、互动数据、热门评论和摘要。 | 需要采集微博热搜，或修复微博热搜作者、评论、落库不准的问题时。 | `请用 webo-cdp 更新微博热搜数据` |
+| `xiaodouya-ip-backend` | 打开新榜小豆芽 Windows 客户端，按当前 IP 名匹配账号管理器列表，检查灰色登录状态，并采集自有账号后台作品数据。 | 需要采集 IP 中心自有账号后台数据、作品互动走势或素材证据时。 | `请用 xiaodouya-ip-backend 抓取 我是Ayiya 的后台作品数据` |
 
 ## 文档与文件处理
 
@@ -106,11 +128,13 @@
 | `vercel-deploy` | 创建、推广、验证或调试 Vercel 部署，优先走 preview，再在明确授权下发布 production。 | 需要在 Vercel 上部署、验证、提升预发到正式，或排查预览/生产发布问题时。 | `请用 vercel-deploy 帮我把这个项目部署到 Vercel 并验证` |
 | `vercel-deploy-hardening` | 排查 Vercel 上浏览器、CLI、别名和运行时日志相互矛盾的部署故障。 | 遇到假 CORS、旧前端哈希资源、只在 Vercel 出现的 Prisma SQLite 故障，或 CLI 与线上状态不一致时。 | `请用 vercel-deploy-hardening 帮我排查这个 Vercel 线上异常` |
 
-## 本次补齐的技能
+## 本次更新
 
-旧版 catalog 只覆盖了 28 个 skill，缺失的 27 个已在本次重建中补齐：
+本次已按当前机器上的 `C:\Users\Administrator\.codex\skills` 实际目录重新核对并补齐漏列 skill：
 
-`autoplan`、`benchmark`、`browse`、`canary`、`checkpoint`、`cso`、`design-html`、`design-review`、`design-shotgun`、`devex-review`、`document-release`、`gstack`、`gstack-upgrade`、`health`、`investigate`、`land-and-deploy`、`learn`、`open-gstack-browser`、`pair-agent`、`plan-devex-review`、`qa`、`qa-only`、`retro`、`review`、`setup-browser-cookies`、`setup-deploy`、`ship`。
+`bilibili-blogger-deep-capture`、`bilibili-cdp`、`douyin-blogger-deep-capture`。
+
+同时将已不存在的旧条目 `douyin-profile-cdp` 更正为当前实际存在的 `douyin-blogger-deep-capture`，并把顶部唯一 skill 统计更新为 69。
 
 ## 补充说明
 
@@ -122,4 +146,4 @@
 | 规划类 skill | `office-hours`、`autoplan`、`plan-*`、`design-consultation` 更适合在编码前先用，能减少返工。 |
 | 浏览器类 skill | `gstack`、`browse`、`playwright`、`open-gstack-browser`、`setup-browser-cookies` 适合搭配使用。 |
 | 去重规则 | 本目录里 `gstack-upgrade` 存在两个同名实现目录，但 catalog 按 `name` 去重，只保留一个条目。 |
-| 目录范围 | 本文件只统计 `C:\Users\85337\.codex\skills` 下递归找到的 skill，不包含插件缓存目录和其他外部仓库中的 skill。 |
+| 目录范围 | 本文件只统计 `C:\Users\Administrator\.codex\skills` 下递归找到的 skill，不包含插件缓存目录和其他外部仓库中的 skill。 |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Douyin CDP"
+  short_description: "ShadowBot CDP capture for Douyin creator index hotspots."
+  default_prompt: "Use $douyin-cdp to capture Douyin Creator Center index hotlists through ShadowBot CDP."

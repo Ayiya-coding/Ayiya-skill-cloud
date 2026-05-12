@@ -1,0 +1,4 @@
+interface:
+  display_name: "Baidu CDP"
+  short_description: "Capture Baidu hot-search data with ShadowBot CDP"
+  default_prompt: "Use $baidu-cdp to refresh Baidu hot-search data into the media-coding database."

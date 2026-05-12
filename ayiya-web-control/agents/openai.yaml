@@ -1,0 +1,4 @@
+interface:
+  display_name: "AyIYA Web Control"
+  short_description: "General browser automation control framework."
+  default_prompt: "Use $ayiya-web-control to control the target website with a persistent Chrome profile, checkpoints, downloads, and a site-specific adapter."
